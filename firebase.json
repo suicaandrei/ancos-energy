@@ -1,8 +1,7 @@
 {
   "hosting": {
-    "public": "dist/ancos-energy/browser",
+    "public": "public",
     "ignore": [
-      "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
