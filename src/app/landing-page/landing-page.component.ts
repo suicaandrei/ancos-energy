@@ -1,27 +1,14 @@
-import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  HostListener,
-  QueryList,
-  Renderer2,
-  ViewChild,
-  ViewChildren,
-} from '@angular/core';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
-  standalone: true,
-  imports: [CommonModule, NavbarComponent, FooterComponent],
   templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['./landing-page.component.scss'],
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnInit {
   @ViewChildren('animatedDivs') componentDiv: QueryList<ElementRef> | undefined;
+
+  ngOnInit() {}
 
   constructor(private renderer: Renderer2) {}
 

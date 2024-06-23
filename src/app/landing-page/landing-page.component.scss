@@ -1,35 +1,31 @@
-:host {
-  display: block;
-}
-
 .title-text {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .content-text {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 /* Define the initial state of the animated elements */
 .animated-test {
-  opacity: 0;
-  transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 /* Define the animation */
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Apply the animation to elements when they become visible */
 .animated-visible {
-  animation: slideIn 3s ease forwards;
+    animation: slideIn 3s ease forwards;
 }
