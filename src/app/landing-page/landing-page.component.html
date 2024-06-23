@@ -10,22 +10,22 @@
     loop
   ></video>
 
-  <div class="w-[50vw] absolute container left-24 top-24 text-white">
-    <p class="text-white text-7xl">
+  <div class="w-[50vw] absolute container left-[20vw] top-2 sm:top-6 lg:top-5 xl:top-24 text-white">
+    <p class="text-white sm:text-3xl lg:text-7xl">
       Agent autorizat ANRE pentru proiectarea si executia instalatiilor de gaze
       naturale
     </p>
 
-    <p class="my-5 text-3xl">
+    <p class="my-1 xs:my-5 text-xs sm:text-base xl:text-3xl">
       Peste 20 de ani de experienta
     </p>
 
-    <button class="bg-orange-500 py-3 px-4 rounded-3xl">Obtine o oferta</button>
+    <button class="bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm">Obtine o oferta</button>
   </div>
 </div>
 
 <!-- despre noi -->
-<div class="container grid grid-cols-2 gap-6 my-24">
+<div class="container grid sm:grid-cols-2 gap-6 my-24 px-3">
   <div class="text-[#333]">
     <p class="font-bold">Despre noi</p>
 
@@ -54,10 +54,14 @@
 
 <!-- serviciile noastre -->
 <div class="border-y border-gray-border-line mb-24">
-  <div class="container grid grid-cols-3">
-    <div class="row-span-3 pt-20 border-r border-gray-border-line">
+  <div
+    class="container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-3 gap-10 pb-20 xl:pb-0"
+  >
+    <div
+      class="sm:col-span-2 xl:col-span-1 xl:row-span-3 pt-20 xl:border-r border-gray-border-line"
+    >
       <p class="title-text">Serviciile noastre</p>
-      <p class="mt-4 mb-5 content-text" #animatedDivs>
+      <p class="mt-4 mb-5 text-3xl xl:text-4xl" #animatedDivs>
         Oferim servicii pentru instalatii de gaze naturale la cheie
       </p>
 
@@ -68,9 +72,14 @@
       </button>
     </div>
 
-    <div class="px-24 py-20">
-      <div class="w-24">
-        <img #animatedDivs src="./assets/icons/proiectare.png" alt="" />
+    <div class="text-center xl:px-24 xl:py-20">
+      <div class="flex justify-center">
+        <img
+          class="w-24"
+          #animatedDivs
+          src="./assets/icons/proiectare.png"
+          alt=""
+        />
       </div>
 
       <p class="title-text my-5">Proiectare si executie</p>
@@ -82,9 +91,14 @@
       </p>
     </div>
 
-    <div class="px-24 py-20">
-      <div class="w-24">
-        <img #animatedDivs src="./assets/icons/verificari.png" alt="" />
+    <div class="text-center xl:px-24 xl:py-20">
+      <div class="flex justify-center">
+        <img
+          class="w-24"
+          #animatedDivs
+          src="./assets/icons/verificari.png"
+          alt=""
+        />
       </div>
 
       <p class="title-text my-5">Verificari si revizii</p>
@@ -96,9 +110,14 @@
       </p>
     </div>
 
-    <div class="px-24 py-20">
-      <div class="w-24">
-        <img #animatedDivs src="./assets/icons/termice.png" alt="" />
+    <div class="text-center xl:px-24 xl:py-20">
+      <div class="flex justify-center">
+        <img
+          class="w-24"
+          #animatedDivs
+          src="./assets/icons/termice.png"
+          alt=""
+        />
       </div>
 
       <p class="title-text my-5">Instalatii termice</p>
@@ -110,9 +129,14 @@
       </p>
     </div>
 
-    <div class="px-24 py-20">
-      <div class="w-24">
-        <img #animatedDivs src="./assets/icons/centrala.png" alt="" />
+    <div class="text-center xl:px-24 xl:py-20">
+      <div class="flex justify-center">
+        <img
+          class="w-24"
+          #animatedDivs
+          src="./assets/icons/centrala.png"
+          alt=""
+        />
       </div>
 
       <p class="title-text my-5">Centrala termica</p>
