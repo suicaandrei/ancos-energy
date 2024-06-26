@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'despre-noi',
     component: AboutUsComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   },
 ];
 

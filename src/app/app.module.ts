@@ -7,6 +7,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ServicesComponent } from './services/services.component';
 import { SharedModule } from './shared/shared.module';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     LandingPageComponent,
     ServicesComponent,
     AboutUsComponent,
+    ContactComponent
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
