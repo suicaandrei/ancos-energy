@@ -1,4 +1,13 @@
-import { Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  QueryList,
+  Renderer2,
+  ViewChildren,
+} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-services',
@@ -10,7 +19,7 @@ export class ServicesComponent implements OnInit {
 
   ngOnInit() {}
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private router: Router) {}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -28,5 +37,9 @@ export class ServicesComponent implements OnInit {
         this.renderer.addClass(elementRef, 'animated-visible');
       }
     });
+  }
+
+  goToContact(){
+    this.router.navigate(['contact']);
   }
 }

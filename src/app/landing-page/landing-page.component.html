@@ -1,16 +1,18 @@
 <app-navbar></app-navbar>
 
 <!-- video background section -->
-<div class="relative">
+<div class="relative flex h-[90vh]">
   <video
-    class="w-full"
+    class="object-cover w-full"
     src="./assets/videos/Video.mp4"
     autoplay
     muted
     loop
   ></video>
 
-  <div class="w-[50vw] absolute container left-[20vw] top-2 sm:top-6 lg:top-5 xl:top-24 text-white">
+  <div
+    class="w-[50vw] absolute container left-[20vw] top-[25vh] lg:top-[20vh] xl:top-[25vh] text-white"
+  >
     <p class="text-white sm:text-3xl lg:text-7xl">
       Agent autorizat ANRE pentru proiectarea si executia instalatiilor de gaze
       naturale
@@ -20,7 +22,11 @@
       Peste 20 de ani de experienta
     </p>
 
-    <button class="bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm">Obtine o oferta</button>
+    <button
+      class="bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm"
+    >
+      Obtine o oferta
+    </button>
   </div>
 </div>
 
@@ -60,16 +66,21 @@
     <div
       class="sm:col-span-2 xl:col-span-1 xl:row-span-3 pt-20 xl:border-r border-gray-border-line"
     >
-      <p class="title-text">Serviciile noastre</p>
-      <p class="mt-4 mb-5 text-3xl xl:text-4xl" #animatedDivs>
+      <p class="title-text text-center xl:text-start">Serviciile noastre</p>
+      <p
+        class="mt-4 mb-5 text-3xl xl:text-4xl text-center xl:text-start"
+        #animatedDivs
+      >
         Oferim servicii pentru instalatii de gaze naturale la cheie
       </p>
 
-      <button
-        class="mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black"
-      >
-        Toate serviciile
-      </button>
+      <div class="flex justify-center xl:justify-start">
+        <button
+          class="mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black"
+        >
+          Toate serviciile
+        </button>
+      </div>
     </div>
 
     <div class="text-center xl:px-24 xl:py-20">

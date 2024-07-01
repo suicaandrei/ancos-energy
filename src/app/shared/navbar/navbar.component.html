@@ -1,6 +1,9 @@
-<div class="flex justify-between p-2 bg-[#201b1b]">
-  <div class="max-w-52">
-    <img src="./assets/logos/Ancos_Alb.png" />
+<div
+  #navbar
+  class="flex justify-between p-2 bg-[#201b1b] fixed top-0 z-50 w-full"
+>
+  <div class="max-w-32 md:max-w-52">
+    <img (click)="goTo('home')" class="cursor-pointer" src="./assets/logos/Ancos_Alb.png" />
   </div>
 
   <div class="flex-wrap gap-6 items-center text-white hidden md:flex">

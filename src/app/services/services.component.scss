@@ -29,3 +29,14 @@
 .animated-visible {
     animation: slideIn 3s ease forwards;
 }
+
+.hover-animation p,
+.hover-animation img {
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.hover-animation:hover p,
+.hover-animation:hover img {
+    transform: scale(1.02);
+}
