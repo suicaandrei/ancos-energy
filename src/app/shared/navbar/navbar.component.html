@@ -3,7 +3,11 @@
   class="flex justify-between p-2 bg-[#201b1b] fixed top-0 z-50 w-full"
 >
   <div class="max-w-32 md:max-w-52">
-    <img (click)="goTo('home')" class="cursor-pointer" src="./assets/logos/Ancos_Alb.png" />
+    <img
+      (click)="goTo('home')"
+      class="cursor-pointer"
+      src="./assets/logos/Ancos_Alb.png"
+    />
   </div>
 
   <div class="flex-wrap gap-6 items-center text-white hidden md:flex">
@@ -23,7 +27,16 @@
       CONTACT
     </p>
 
-    <button class="bg-orange-500 py-3 px-4 rounded-3xl">Obtine o oferta</button>
+    <button (click)="goTo('contact')"
+      class="flex gap-3 items-center bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm hover:bg-white hover:text-black hover:border hover:border-black transition duration-200 orange-btn"
+    >
+      <p>Obtine o oferta</p>
+
+      <mat-icon
+        class="arrow-se text-base transition duration-200 hover:-rotate-45"
+        >south_east</mat-icon
+      >
+    </button>
   </div>
 
   <div class="md:hidden px-3 text-white content-center">

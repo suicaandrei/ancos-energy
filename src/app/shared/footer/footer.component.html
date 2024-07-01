@@ -1,17 +1,29 @@
 <div class="bg-[#201b1b]">
-  <div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-10 text-center gap-6 px-3">
+  <div
+    class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-10 text-center gap-6 px-3"
+  >
     <div class="text-xs text-orange-500 lg:max-w-40 lg:text-start">
       All content © 2024 Ancos Energy. All rights reserved. Engineered by Andrei
       Cosma. Unauthorized reproduction, distribution, or modification is
       strictly prohibited.
     </div>
 
-    <div class="flex flex-col gap-1 text-white sm:col-start-2  sm:row-start-2 lg:row-start-1 ">
+    <div
+      class="flex flex-col gap-1 text-white sm:col-start-2 sm:row-start-2 lg:row-start-1"
+    >
       <p class="text-orange-500 text-lg font-bold">Confidentialitate</p>
 
       <a class="text-xs hover:text-orange-500" href="">Cookies</a>
-      <a class="text-xs hover:text-orange-500" href="">Terms and Conditions</a>
-      <a class="text-xs hover:text-orange-500" href="">Privacy Policy</a>
+      <a
+        class="text-xs hover:text-orange-500 cursor-pointer"
+        (click)="goTo('terms-and-conditions')"
+        >Terms and Conditions</a
+      >
+      <a
+        class="text-xs hover:text-orange-500 cursor-pointer"
+        (click)="goTo('privacy-policy')"
+        >Privacy Policy</a
+      >
     </div>
 
     <div class="flex flex-col gap-1 text-white">
@@ -28,7 +40,9 @@
       </a>
     </div>
 
-    <div class="flex justify-center lg:justify-end sm:col-start-2 sm:row-start-1 lg:col-start-4">
+    <div
+      class="flex justify-center lg:justify-end sm:col-start-2 sm:row-start-1 lg:col-start-4"
+    >
       <img class="w-52 h-20" src="./assets/logos/Ancos_Alb.png" />
     </div>
   </div>

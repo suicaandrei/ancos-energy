@@ -23,9 +23,15 @@
     </p>
 
     <button
-      class="bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm"
+      (click)="goToContact()"
+      class="flex gap-3 items-center bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm hover:bg-white hover:text-black hover:border hover:border-black transition duration-200 orange-btn"
     >
-      Obtine o oferta
+      <p>Obtine o oferta</p>
+
+      <mat-icon
+        class="arrow-se text-base transition duration-200 hover:-rotate-45"
+        >south_east</mat-icon
+      >
     </button>
   </div>
 </div>
