@@ -1,8 +1,9 @@
 <app-navbar></app-navbar>
 
 <!-- video background section -->
-<div class="relative flex h-[90vh]">
+<div class="relative flex h-screen">
   <video
+    type="video/mp4"
     class="object-cover w-full"
     src="./assets/videos/Video.mp4"
     autoplay
@@ -11,19 +12,20 @@
   ></video>
 
   <div
-    class="w-[50vw] absolute container left-[20vw] top-[25vh] lg:top-[20vh] xl:top-[25vh] text-white"
+    class="w-[90vw] md:w-[50vw] absolute container left-[5vw] md:left-[10vw] top-[10vh] md:top-[25vh] lg:top-[20vh] xl:top-[25vh] text-white"
   >
-    <p class="text-white sm:text-3xl lg:text-7xl">
+    <p class="text-white text-5xl 2xs:text-6xl lg:text-7xl">
       Agent autorizat ANRE pentru proiectarea si executia instalatiilor de gaze
       naturale
     </p>
 
-    <p class="my-1 xs:my-5 text-xs sm:text-base xl:text-3xl">
-      Peste 20 de ani de experienta
+    <p class="my-5 text-xl sm:text-base xl:text-3xl">
+      Servicii implementate de experti la preturi accesibile. Peste 20 de ani de
+      experienta.
     </p>
 
     <button
-      (click)="goToContact()"
+      (click)="goToRoute('contact')"
       class="flex gap-3 items-center bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm hover:bg-white hover:text-black hover:border hover:border-black transition duration-200 orange-btn"
     >
       <p>Obtine o oferta</p>
@@ -42,20 +44,27 @@
     <p class="font-bold">Despre noi</p>
 
     <p class="font-medium my-5 text-4xl" #animatedDivs>
-      Oferim soluții profesionale astfel încât să livrăm proiecte sustenabile și
-      eficiente
+      Ancos Energy oferă servicii complete, la cheie, în domeniul gazelor
+      naturale.
     </p>
 
     <p class="text-xl">
-      1999 Ancos Energy Install este o echipă născută din pură pasiune pentru
-      ingineria gazelor naturale și beneficiile pe care această sursă de energie
-      le aduce.
+      Ancos Energy este o echipă născută din pură pasiune pentru ingineria
+      gazelor naturale și beneficiile pe care această sursă de energie le aduce.
+      Obiectivul companiei noastre este acela de a ne sprijini clienții cu toate
+      implicațiile pe care o instalație de gaze naturale le aduce.
     </p>
 
     <button
-      class="mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black"
+      (click)="goToRoute('despre-noi')"
+      class="flex gap-3 items-center mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black transition duration-200 black-btn"
     >
-      Mai multe despre noi
+      <p>Mai multe despre noi</p>
+
+      <mat-icon
+        class="arrow-se text-base transition duration-200 hover:-rotate-45"
+        >south_east</mat-icon
+      >
     </button>
   </div>
 
@@ -65,105 +74,120 @@
 </div>
 
 <!-- serviciile noastre -->
-<div class="border-y border-gray-border-line mb-24">
+<div
+  class="mb-24 grid md:grid-cols-2 xl:grid-cols-3 border-t border-gray-border-line"
+>
   <div
-    class="container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-3 gap-10 pb-20 xl:pb-0"
+    class="md:col-span-2 xl:col-span-1 xl:row-span-2 py-12 px-3 md:px-24 border-b border-gray-300 text-center xl:text-start xl:border-r"
   >
-    <div
-      class="sm:col-span-2 xl:col-span-1 xl:row-span-3 pt-20 xl:border-r border-gray-border-line"
+    <p class="title-text text-center xl:text-start">Serviciile noastre</p>
+    <p
+      class="mt-4 mb-5 text-3xl xl:text-4xl text-center xl:text-start"
+      #animatedDivs
     >
-      <p class="title-text text-center xl:text-start">Serviciile noastre</p>
-      <p
-        class="mt-4 mb-5 text-3xl xl:text-4xl text-center xl:text-start"
-        #animatedDivs
+      Oferim orice fel de serviciu pentru instalațiile de gaze naturale.
+    </p>
+
+    <div class="flex justify-center xl:justify-start">
+      <button
+        (click)="goToRoute('servicii')"
+        class="flex gap-3 items-center mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black transition duration-200 black-btn"
       >
-        Oferim servicii pentru instalatii de gaze naturale la cheie
-      </p>
+        <p>Toate serviciile</p>
 
-      <div class="flex justify-center xl:justify-start">
-        <button
-          class="mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black"
+        <mat-icon
+          class="arrow-se text-base transition duration-200 hover:-rotate-45"
+          >south_east</mat-icon
         >
-          Toate serviciile
-        </button>
-      </div>
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation"
+  >
+    <div class="flex justify-center">
+      <img
+        class="w-24 cursor-pointer"
+        #animatedDivs
+        src="./assets/icons/proiectare.png"
+        alt=""
+      />
     </div>
 
-    <div class="text-center xl:px-24 xl:py-20">
-      <div class="flex justify-center">
-        <img
-          class="w-24"
-          #animatedDivs
-          src="./assets/icons/proiectare.png"
-          alt=""
-        />
-      </div>
+    <p class="title-text my-5">Proiectare si executie</p>
 
-      <p class="title-text my-5">Proiectare si executie</p>
+    <p class="text-lg xl:text-xl">
+      Oferim servicii complete de proiectare și execuție a instalațiilor de
+      gaze, asigurând siguranța, eficiența și conformitatea cu reglementările
+      ANRE prin specialiști autorizați.
+    </p>
+  </div>
 
-      <p class="text-xl">
-        1999 Ancos Energy Install este o echipă născută din pură pasiune pentru
-        ingineria gazelor naturale și beneficiile pe care această sursă de
-        energie le aduce.
-      </p>
+  <div
+    class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation"
+  >
+    <div class="flex justify-center">
+      <img
+        class="w-24 cursor-pointer"
+        #animatedDivs
+        src="./assets/icons/verificari.png"
+        alt=""
+      />
     </div>
 
-    <div class="text-center xl:px-24 xl:py-20">
-      <div class="flex justify-center">
-        <img
-          class="w-24"
-          #animatedDivs
-          src="./assets/icons/verificari.png"
-          alt=""
-        />
-      </div>
+    <p class="title-text my-5">Verificari si revizii</p>
 
-      <p class="title-text my-5">Verificari si revizii</p>
+    <p class="text-lg xl:text-xl">
+      Ancos Energy oferă servicii de verificări și revizii periodice ale
+      instalațiilor de gaze la fiecare 2, respectiv 10 ani, asigurând
+      conformitatea cu legislația românească și funcționarea în siguranță a
+      instalațiilor dumneavoastră.
+    </p>
+  </div>
 
-      <p class="text-xl">
-        1999 Ancos Energy Install este o echipă născută din pură pasiune pentru
-        ingineria gazelor naturale și beneficiile pe care această sursă de
-        energie le aduce.
-      </p>
+  <div
+    class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation"
+  >
+    <div class="flex justify-center">
+      <img
+        class="w-24 cursor-pointer"
+        #animatedDivs
+        src="./assets/icons/termice.png"
+        alt=""
+      />
     </div>
 
-    <div class="text-center xl:px-24 xl:py-20">
-      <div class="flex justify-center">
-        <img
-          class="w-24"
-          #animatedDivs
-          src="./assets/icons/termice.png"
-          alt=""
-        />
-      </div>
+    <p
+      class="title-text my-5 transition duration-300 ease-in-out hover:scale-110"
+    >
+      Instalatii termice
+    </p>
 
-      <p class="title-text my-5">Instalatii termice</p>
+    <p class="text-lg xl:text-xl">
+      Asigurăm servicii complete pentru instalații termice, utilizănd
+      echipamente de calitate și tehnologii moderne.
+    </p>
+  </div>
 
-      <p class="text-xl">
-        1999 Ancos Energy Install este o echipă născută din pură pasiune pentru
-        ingineria gazelor naturale și beneficiile pe care această sursă de
-        energie le aduce.
-      </p>
+  <div
+    class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation"
+  >
+    <div class="flex justify-center">
+      <img
+        class="w-24 cursor-pointer"
+        #animatedDivs
+        src="./assets/icons/centrala.png"
+        alt=""
+      />
     </div>
 
-    <div class="text-center xl:px-24 xl:py-20">
-      <div class="flex justify-center">
-        <img
-          class="w-24"
-          #animatedDivs
-          src="./assets/icons/centrala.png"
-          alt=""
-        />
-      </div>
+    <p class="title-text my-5">Centrala termica</p>
 
-      <p class="title-text my-5">Centrala termica</p>
-
-      <p class="text-xl">
-        1999 Ancos Energy Install este o echipă născută din pură pasiune pentru
-        ingineria gazelor naturale și beneficiile pe care această sursă de
-        energie le aduce.
-      </p>
-    </div>
+    <p class="text-lg xl:text-xl">
+      Oferim servicii de instalare pentru centrale, garantând soluții eficiente
+      pentru încălzirea locuinței dumneavoastră.
+    </p>
   </div>
 </div>
 

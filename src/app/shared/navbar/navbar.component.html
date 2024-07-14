@@ -1,8 +1,8 @@
 <div
   #navbar
-  class="flex justify-between p-2 bg-[#201b1b] fixed top-0 z-50 w-full"
+  class="flex justify-between p-2 bg-[#201b1b] fixed top-0 z-40 w-full"
 >
-  <div class="max-w-32 md:max-w-52">
+  <div class="max-w-32 md:max-w-40">
     <img
       (click)="goTo('home')"
       class="cursor-pointer"
@@ -28,7 +28,7 @@
     </p>
 
     <button (click)="goTo('contact')"
-      class="flex gap-3 items-center bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm hover:bg-white hover:text-black hover:border hover:border-black transition duration-200 orange-btn"
+      class="flex gap-3 items-center bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm hover:bg-white hover:text-black hover:border hover:border-black transition duration-200 orange-btn w-[11.25rem]"
     >
       <p>Obtine o oferta</p>
 
@@ -46,7 +46,7 @@
   </div>
 </div>
 
-<mat-sidenav-container class="!z-20" [ngClass]="{ 'w-full': navBarOpened }">
+<mat-sidenav-container class="!z-50" [ngClass]="{ 'w-full': navBarOpened }">
   <mat-sidenav
     [fixedInViewport]="true"
     [opened]="navBarOpened"

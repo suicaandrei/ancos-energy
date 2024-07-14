@@ -39,7 +39,7 @@ export class LandingPageComponent implements OnInit {
     });
   }
 
-  goToContact() {
-    this.router.navigate(['contact']);
+  goToRoute(route: string) {
+    this.router.navigate([route]);
   }
 }
