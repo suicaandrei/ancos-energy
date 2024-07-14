@@ -2,13 +2,16 @@
 
 <!-- video background section -->
 <div class="relative flex h-screen">
-  <video 
+  <video
     class="object-cover w-full"
-    src="./assets/videos/Video.mp4"
-    autoplay
-    muted
     loop
-  ></video>
+    muted
+    autoplay
+    oncanplay="this.play()"
+    onloadedmetadata="this.muted = true"
+  >
+    <source src="./assets/videos/Video.mp4" type="video/mp4" />
+  </video>
 
   <div
     class="w-[90vw] md:w-[50vw] absolute container left-[5vw] md:left-[10vw] top-[10vh] md:top-[25vh] lg:top-[20vh] xl:top-[25vh] text-white"
@@ -25,7 +28,7 @@
 
     <button
       (click)="goToRoute('contact')"
-      class="flex gap-3 items-center bg-orange-500 p-1 xs:py-3 xs:px-4 rounded-3xl text-[0.5rem] xs:text-sm hover:bg-white hover:text-black hover:border hover:border-black transition duration-200 orange-btn"
+      class="flex gap-3 items-center bg-orange-500 p-1 px-4 py-3 rounded-3xl hover:bg-white hover:text-black hover:border hover:border-black transition duration-200 orange-btn"
     >
       <p>Obtine o oferta</p>
 
