@@ -2,20 +2,12 @@
 
 <!-- video background section -->
 <div class="relative flex h-screen">
-  <video
-    class="object-cover w-full"
-    loop
-    muted
-    autoplay
-    oncanplay="this.play()"
-    onloadedmetadata="this.muted = true"
-  >
+  <video class="object-cover w-full" autoplay muted loop>
     <source src="./assets/videos/Video.mp4" type="video/mp4" />
   </video>
 
   <div
-    class="w-[90vw] md:w-[50vw] absolute container left-[5vw] md:left-[10vw] top-[10vh] md:top-[25vh] lg:top-[20vh] xl:top-[25vh] text-white"
-  >
+    class="w-[90vw] md:w-[50vw] absolute container left-[5vw] md:left-[10vw] top-[10vh] md:top-[25vh] lg:top-[20vh] xl:top-[25vh] text-white">
     <p class="text-white text-5xl 2xs:text-6xl lg:text-7xl">
       Agent autorizat ANRE pentru proiectarea si executia instalatiilor de gaze
       naturale
@@ -26,16 +18,11 @@
       experienta.
     </p>
 
-    <button
-      (click)="goToRoute('contact')"
-      class="flex gap-3 items-center bg-orange-500 p-1 px-4 py-3 rounded-3xl hover:bg-white hover:text-black hover:border hover:border-black transition duration-200 orange-btn"
-    >
+    <button (click)="goToRoute('contact')"
+      class="flex gap-3 items-center bg-orange-500 p-1 px-4 py-3 rounded-3xl hover:bg-white hover:text-black hover:border hover:border-black transition duration-200 orange-btn">
       <p>Obtine o oferta</p>
 
-      <mat-icon
-        class="arrow-se text-base transition duration-200 hover:-rotate-45"
-        >south_east</mat-icon
-      >
+      <mat-icon class="arrow-se text-base transition duration-200 hover:-rotate-45">south_east</mat-icon>
     </button>
   </div>
 </div>
@@ -57,16 +44,11 @@
       implicațiile pe care o instalație de gaze naturale le aduce.
     </p>
 
-    <button
-      (click)="goToRoute('despre-noi')"
-      class="flex gap-3 items-center mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black transition duration-200 black-btn"
-    >
+    <button (click)="goToRoute('despre-noi')"
+      class="flex gap-3 items-center mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black transition duration-200 black-btn">
       <p>Mai multe despre noi</p>
 
-      <mat-icon
-        class="arrow-se text-base transition duration-200 hover:-rotate-45"
-        >south_east</mat-icon
-      >
+      <mat-icon class="arrow-se text-base transition duration-200 hover:-rotate-45">south_east</mat-icon>
     </button>
   </div>
 
@@ -76,45 +58,27 @@
 </div>
 
 <!-- serviciile noastre -->
-<div
-  class="mb-24 grid md:grid-cols-2 xl:grid-cols-3 border-t border-gray-border-line"
->
+<div class="mb-24 grid md:grid-cols-2 xl:grid-cols-3 border-t border-gray-border-line">
   <div
-    class="md:col-span-2 xl:col-span-1 xl:row-span-2 py-12 px-3 md:px-24 border-b border-gray-300 text-center xl:text-start xl:border-r"
-  >
+    class="md:col-span-2 xl:col-span-1 xl:row-span-2 py-12 px-3 md:px-24 border-b border-gray-300 text-center xl:text-start xl:border-r">
     <p class="title-text text-center xl:text-start">Serviciile noastre</p>
-    <p
-      class="mt-4 mb-5 text-3xl xl:text-4xl text-center xl:text-start"
-      #animatedDivs
-    >
+    <p class="mt-4 mb-5 text-3xl xl:text-4xl text-center xl:text-start" #animatedDivs>
       Oferim orice fel de serviciu pentru instalațiile de gaze naturale.
     </p>
 
     <div class="flex justify-center xl:justify-start">
-      <button
-        (click)="goToRoute('servicii')"
-        class="flex gap-3 items-center mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black transition duration-200 black-btn"
-      >
+      <button (click)="goToRoute('servicii')"
+        class="flex gap-3 items-center mt-5 bg-black text-white px-4 py-3 rounded-3xl hover:bg-white hover:border hover:border-black hover:text-black transition duration-200 black-btn">
         <p>Toate serviciile</p>
 
-        <mat-icon
-          class="arrow-se text-base transition duration-200 hover:-rotate-45"
-          >south_east</mat-icon
-        >
+        <mat-icon class="arrow-se text-base transition duration-200 hover:-rotate-45">south_east</mat-icon>
       </button>
     </div>
   </div>
 
-  <div
-    class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation"
-  >
+  <div class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation">
     <div class="flex justify-center">
-      <img
-        class="w-24 cursor-pointer"
-        #animatedDivs
-        src="./assets/icons/proiectare.png"
-        alt=""
-      />
+      <img class="w-24 cursor-pointer" #animatedDivs src="./assets/icons/proiectare.png" alt="" />
     </div>
 
     <p class="title-text my-5">Proiectare si executie</p>
@@ -126,16 +90,9 @@
     </p>
   </div>
 
-  <div
-    class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation"
-  >
+  <div class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation">
     <div class="flex justify-center">
-      <img
-        class="w-24 cursor-pointer"
-        #animatedDivs
-        src="./assets/icons/verificari.png"
-        alt=""
-      />
+      <img class="w-24 cursor-pointer" #animatedDivs src="./assets/icons/verificari.png" alt="" />
     </div>
 
     <p class="title-text my-5">Verificari si revizii</p>
@@ -148,21 +105,12 @@
     </p>
   </div>
 
-  <div
-    class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation"
-  >
+  <div class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation">
     <div class="flex justify-center">
-      <img
-        class="w-24 cursor-pointer"
-        #animatedDivs
-        src="./assets/icons/termice.png"
-        alt=""
-      />
+      <img class="w-24 cursor-pointer" #animatedDivs src="./assets/icons/termice.png" alt="" />
     </div>
 
-    <p
-      class="title-text my-5 transition duration-300 ease-in-out hover:scale-110"
-    >
+    <p class="title-text my-5 transition duration-300 ease-in-out hover:scale-110">
       Instalatii termice
     </p>
 
@@ -172,16 +120,9 @@
     </p>
   </div>
 
-  <div
-    class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation"
-  >
+  <div class="text-center xl:px-24 py-6 px-1 xl:py-20 border-b border-r border-gray-300 hover-animation">
     <div class="flex justify-center">
-      <img
-        class="w-24 cursor-pointer"
-        #animatedDivs
-        src="./assets/icons/centrala.png"
-        alt=""
-      />
+      <img class="w-24 cursor-pointer" #animatedDivs src="./assets/icons/centrala.png" alt="" />
     </div>
 
     <p class="title-text my-5">Centrala termica</p>
