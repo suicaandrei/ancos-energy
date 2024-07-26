@@ -19,9 +19,9 @@ export class NavbarComponent implements OnInit {
 
   @ViewChild('navbar') componentDiv: ElementRef | undefined;
 
-  constructor(private router: Router, private renderer: Renderer2) {}
+  constructor(private router: Router, private renderer: Renderer2) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -34,6 +34,8 @@ export class NavbarComponent implements OnInit {
       this.renderer.addClass(elementRef, 'hidden');
       this.renderer.removeClass(elementRef, 'flex');
     } else {
+      if (currentScrollPos < 0) currentScrollPos = 0;
+
       // Scrolling up
       this.renderer.addClass(elementRef, 'flex');
       this.renderer.removeClass(elementRef, 'hidden');
