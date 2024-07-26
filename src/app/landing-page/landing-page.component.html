@@ -2,7 +2,7 @@
 
 <!-- video background section -->
 <div class="relative flex h-screen">
-  <video class="object-cover w-full" autoplay muted loop>
+  <video class="object-cover w-full" [autoplay]="true" [muted]="true" [loop]="true" [attr.playsInline]="true">
     <source src="./assets/videos/Video.mp4" type="video/mp4" />
   </video>
 
